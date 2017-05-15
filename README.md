@@ -1,7 +1,6 @@
 # EctoExAdmin
 
-**TODO: Add description**
-
+Add Ecto support to ExAdmin.
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -13,7 +12,6 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ecto_ex_admin](https://hexdocs.pm/ecto_ex_admin).
+## License
 
+TBD

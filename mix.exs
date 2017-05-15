@@ -1,34 +1,36 @@
 defmodule EctoExAdmin.Mixfile do
   use Mix.Project
 
+  @version "0.1.0"
   def project do
     [app: :ecto_ex_admin,
-     version: "0.1.0",
+     version: @version,
      elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+
+     # Hex
+     description: "Integration betwen ExAdmin & Ecto",
+     package: package(),
+
+     # Docs
+     name: "Ecto/ExAdmin",
+     docs: [source_ref: "v#{@version}",
+            source_url: ""]]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
-    # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger, :ecto],
-     mod: {EctoExAdmin.Application, []}]
+    [applications: [:logger, :ecto]]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
+  def package() do
+    [maintainers: ["Steve Pallen"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/smpallen99/ecto_ex_amin"}]
+  end
+
+
   defp deps do
-    [ {:ecto, "~> 2.1"}]
+    [{:ecto, "~> 2.1"},
+     {:ex_admin, "path: ../ex_admin"}]
   end
 end
