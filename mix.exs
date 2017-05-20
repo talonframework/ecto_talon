@@ -31,6 +31,6 @@ defmodule EctoExAdmin.Mixfile do
 
   defp deps do
     [{:ecto, "~> 2.1"},
-     {:ex_admin, "path: ../ex_admin"}]
+     {:ex_admin, github: "ex-admin/ex_admin"}]
   end
 end
