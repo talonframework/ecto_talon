@@ -25,12 +25,12 @@ defmodule EctoExAdmin.Mixfile do
   def package() do
     [maintainers: ["Steve Pallen"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/smpallen99/ecto_ex_amin"}]
+     links: %{"GitHub" => "https://github.com/talonframework/ecto_ex_amin"}]
   end
 
 
   defp deps do
     [{:ecto, "~> 2.1"},
-     {:ex_admin, github: "ex-admin/ex_admin", only: :test}]
+     {:ex_admin, github: "talonframework/ex_admin", only: :test}]
   end
 end
