@@ -1,6 +1,6 @@
-defmodule EctoExAdminTest do
+defmodule EctoTalonTest do
   use ExUnit.Case
-  doctest EctoExAdmin
+  doctest EctoTalon
 
   test "the truth" do
     assert 1 + 1 == 2

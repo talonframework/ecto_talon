@@ -1,14 +1,14 @@
-# EctoExAdmin
+# EctoTalon
 
-Add Ecto support to ExAdmin.
+Add Ecto support to Talon.
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_ex_admin` to your list of dependencies in `mix.exs`:
+by adding `ecto_talon` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:ecto_ex_admin, "~> 0.1.0"}]
+  [{:ecto_talon, "~> 0.1.0"}]
 end
 ```
 

@@ -1,14 +1,14 @@
-defmodule ExAdmin.Schema.Adapters.Ecto do
+defmodule Talon.Schema.Adapters.Ecto do
   @moduledoc """
-  Implements the ExAdmin.Scheam.Adapters behaviour.
+  Implements the Talon.Scheam.Adapters behaviour.
 
-  Add support for Ecto in ExAdin. 
+  Add support for Ecto in ExAdin.
   """
-  @behaviour ExAdmin.Schema.Adapters
+  @behaviour Talon.Schema.Adapters
 
   @doc """
   Retrieve the primay key of a query, schema module, or a schema struct.
-  
+
   ## Examples
 
       iex> primary_key from b in Blog
@@ -60,7 +60,7 @@ defmodule ExAdmin.Schema.Adapters.Ecto do
 
       iex> type(%User{}, :login_count)
       :integer
-      
+
   """
   def type(%Ecto.Query{from: {_, mod}}, key), do: type(mod, key)
   def type(module, key) when is_atom(module) do
@@ -69,7 +69,7 @@ defmodule ExAdmin.Schema.Adapters.Ecto do
   def type(resource, key), do: type(resource.__struct__, key)
 
   @doc """
-  TBD  
+  TBD
   """
   def get_intersection_keys(resource, assoc_name) do
     resource_model = resource.__struct__

@@ -1,19 +1,19 @@
-defmodule EctoExAdmin.Mixfile do
+defmodule EctoTalon.Mixfile do
   use Mix.Project
 
   @version "0.1.0"
   def project do
-    [app: :ecto_ex_admin,
+    [app: :ecto_talon,
      version: @version,
      elixir: "~> 1.4",
      deps: deps(),
 
      # Hex
-     description: "Integration betwen ExAdmin & Ecto",
+     description: "Integration betwen Talon & Ecto",
      package: package(),
 
      # Docs
-     name: "Ecto/ExAdmin",
+     name: "EctoTalon",
      docs: [source_ref: "v#{@version}",
             source_url: ""]]
   end
@@ -25,12 +25,11 @@ defmodule EctoExAdmin.Mixfile do
   def package() do
     [maintainers: ["Steve Pallen"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/talonframework/ecto_ex_amin"}]
+     links: %{"GitHub" => "https://github.com/talonframework/ecto_talon"}]
   end
 
 
   defp deps do
-    [{:ecto, "~> 2.1"},
-     {:ex_admin, github: "talonframework/ex_admin", only: :test}]
+    [{:ecto, "~> 2.1"}]
   end
 end
